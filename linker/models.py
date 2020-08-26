@@ -8,6 +8,8 @@ class LinkEntry(models.Model):
     name = models.CharField(max_length=50, help_text='Enter the name of the service the link points to.')
     link = models.CharField(max_length=100, help_text='Enter the link.')
     description = models.TextField(max_length=300, help_text='Enter a description for the link.')
+    category = models.ForeignKey('Category', on_delete=models.SET_NULL, null=True)
+    clicks = models.IntegerField(default=0, editable=False);
 
     def __str__(self):
         """String for representing the LinkEntry."""
