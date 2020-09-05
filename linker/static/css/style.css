@@ -1,0 +1,47 @@
+html {
+  font-size: 14px;
+  font-family: 'Roboto', sans-serif;
+  background-color: #FFFFFF;
+}
+
+body {
+  /*width: 800px;*/
+  width: available;
+  margin: 0 auto;
+  background-color: #FF9500;
+  padding: 0 20px 20px 20px;
+  border: 5px solid black;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 2px solid #000000;
+  letter-spacing: 1px;
+  font-size: 0.8rem;
+}
+
+h1 {
+  font-size: 40px;
+  text-align: center;
+
+  margin: 0;
+  padding: 20px 0;
+  color: #000000;
+}
+
+h3 {
+  text-align: center;
+}
+
+p, li {
+  font-size: 16px;
+  text-align: center;
+  line-height: 2;
+  letter-spacing: 1px;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}

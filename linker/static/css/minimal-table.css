@@ -1,0 +1,31 @@
+html {
+  font-size: 18px;
+  font-family: 'Roboto', sans-serif;
+  background-color: #FFFFFF;
+}
+
+
+td, th {
+  border: 1px solid #7C878E;
+  padding: 10px 20px;
+}
+
+th {
+  background-color: #ffffff;
+}
+
+td {
+  text-align: left;
+}
+
+tr:nth-child(even) td {
+  background-color: #ffd499;
+}
+
+tr:nth-child(odd) td {
+  background-color: #ffffff;
+}
+
+caption {
+  padding: 10px;
+}
