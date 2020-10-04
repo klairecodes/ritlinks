@@ -4,29 +4,24 @@
 
 <body>
     <h1>Welcome to RitLinks!</h1>
-<!--    <p>Visit the <a href="/about">about</a> page to learn more and to get a tutorial.</p>-->
-{#    {% if index %}#}
-    <h3>Most used sites:</h3>
+    <p>{{ top_message }}</p>
+    {% for category in all_categories %}
+    <h3>{{ category }}</h3>
     <table>
         <tr>
             <th>Site</th>
             <th>Summary</th>
         </tr>
         {% for link in all_links %}
+            {% if link.category == category %}
             <tr>
-            <td>{{link.name}}</td>
-            <td>{{link.description}}</td>
+            <td>{{ link.name }}</td>
+            <td>{{ link.description }}</td>
             </tr>
+            {% endif %}
         {% endfor %}
     </table>
-    <h3>Tools and Utilities:</h3>
-    <table>
-        <tr>
-            <td></td>
-            <td></td>
-        </tr>
-    </table>
-{#    {% endif %}#}
+    {% endfor %}
 
 </body>
 
