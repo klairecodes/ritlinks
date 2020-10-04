@@ -12,7 +12,7 @@ Often new students, or even those who have been enrolled for a while, have troub
 
 ## Dependencies
 + Python 3.8.5
-+ Django 3.1.0
++ Django 3.1.2
 
 ## Installation
 + Be sure to use a Python virtual environment, such as with virtualenv.
