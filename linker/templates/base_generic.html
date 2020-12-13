@@ -1,18 +1,20 @@
 <!DOCTYPE html>
-<html>
-
 <html lang="en">
+{% load static %}
+
 <head>
     <meta charset="UTF-8">
     <title>Better RIT Links!</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    {% load static %}
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
     <link rel="stylesheet" href="{% static 'css/minimal-table.css' %}">
+    <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}"/>
 </head>
 
 <body>
 {% block content %}{% endblock %}
 </body>
+
+<div style="text-align: center;font-size: xx-small">Favicon made from <a href="http://www.onlinewebfonts.com">Online Web Fonts</a></div>
 
 </html>
