@@ -3,7 +3,7 @@ FROM python:latest
 WORKDIR /code
 
 # Port inside container
-ENV PORT 80
+ENV PORT 8000
 ENV PYTHONUNBUFFERED=1
 
 COPY requirements.txt /code/
