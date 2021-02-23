@@ -8,7 +8,7 @@ A website that displays a dynamically updated list of the many websites that Roc
 + Backed by Django for high scalability.
 
 ## The Problem
-Often new students, or even those who have been enrolled for a while, have trouble figuring out where the information and tools that they need are. It doesn't help that many websites are added, switched out, or removed entirely every year. This site attemps to alleviate that problem by providing not only a place where students can see the current sites in use, but also has administrative accounts whereby RIT departments can add or remove sites themselves in order to keep everything updated.
+Often new students, or even those who have been enrolled for a while, have trouble figuring out where the information and tools that they need are. It doesn't help that many websites are added, switched out, or removed entirely by RIT every year. This site attemps to alleviate that problem by providing not only a place where students can see the current sites in use, but also has administrative accounts where RIT departments can easily add or remove sites themselves in order to keep everything updated.
 
 ## Dependencies
 + Python 3.8.5
