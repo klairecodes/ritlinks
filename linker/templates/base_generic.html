@@ -3,24 +3,28 @@
 {% load static %}
 
 <head>
-    <meta charset="UTF-8">
-    <title>Better RIT Links!</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    {% comment %} <link rel="stylesheet" href="{% static 'css/styles.css' %}"> {% endcomment %}
-    {% comment %} <link rel="stylesheet" href="{% static 'css/minimal-table.css' %}"> {% endcomment %}
-    <link rel="shortcut icon" type="image/png" href="{% static 'fav/favicon.ico' %}"/>
-    <!--Stuff for Bootstrap-->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <meta charset="UTF-8">
+  <title>Better RIT Links!</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" type="image/png" href="{% static 'fav/favicon.ico' %}"/>
+  <!--Stuff for Bootstrap-->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <style>
+    body {background-color: #0c0c0c}
+    h1,p {color: #e5e5e5}
+    a {color: #FF9500}
+  </style>
 </head>
 
 <body>
 {% block content %}{% endblock %}
 </body>
 
-<div style="text-align: center;font-size: xx-small">Favicon made from <a href="http://www.onlinewebfonts.com">Online Web Fonts</a></div>
+<div style="text-align:center; font-size:xx-small; color:#e5e5e5">Favicon made from <a href="http://www.onlinewebfonts.com">Online Web Fonts</a></div>
 
 </html>
