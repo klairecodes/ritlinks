@@ -3,25 +3,32 @@
 {% block content %}
 
 <body>
-    <h1>Welcome to RitLinks!</h1>
-    <p>{{ top_message }}</p>
+  <div class="container pt-3">
+    {% comment %} <div class="progress bg-warning fixed-top" style="height:8px">
+      <div class="progress-bar"></div>
+    </div> {% endcomment %}
+    <h1 class="text-center">Welcome to RitLinks!</h1>
+    <p class="text-center">{{ top_message }}</p>
     {% for category in all_categories %}
     <h3>{{ category }}</h3>
-    <table>
-        <tr>
-            <th>Site</th>
-            <th>Summary</th>
-        </tr>
-        {% for link in all_links %}
-            {% if link.category == category %}
-            <tr>
-                <td><a href="{{ link.link }}">{{ link.name }}</a></td>
-            <td>{{ link.description }}</td>
-            </tr>
-            {% endif %}
-        {% endfor %}
-    </table>
+    <div class="table-responsive-sm">
+      <table class="table table-dark table-striped table-hover table-bordered">
+          <tr>
+              <th>Site</th>
+              <th>Summary</th>
+          </tr>
+          {% for link in all_links %}
+              {% if link.category == category %}
+              <tr>
+                  <td><a href="{{ link.link }}">{{ link.name }}</a></td>
+                  <td>{{ link.description }}</td>
+              </tr>
+              {% endif %}
+          {% endfor %}
+      </table>
     {% endfor %}
+    </div>
+    </div>
 
 </body>
 
