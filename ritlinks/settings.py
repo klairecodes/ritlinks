@@ -28,7 +28,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '-!oj1rxe@y2obrq=2x6$et4s4lja+-@qraku8
 # DEBUG looks at an os environment variable
 DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 
-ALLOWED_HOSTS = [".csh.rit.edu", ".cs.house", "ritlinks.com"]
+ALLOWED_HOSTS = ["0.0.0.0", "ritlinks.cs.house"] # VERY TEMPORARY
 
 
 # Application definition
@@ -124,3 +124,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# Joining static directories together
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]

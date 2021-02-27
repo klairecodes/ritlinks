@@ -3,26 +3,26 @@
 {% block content %}
 
 <body>
-    <h1>Welcome to RitLinks!</h1>
-    <p>{{ top_message }}</p>
+  <div class="container pt-3">
+    <h1 class="text-center">Welcome to RITLinks!</h1>
+    <p class="text-center">{{ top_message }}</p>
     {% for category in all_categories %}
-    <h3>{{ category }}</h3>
-    <table>
-        <tr>
-            <th>Site</th>
-            <th>Summary</th>
-        </tr>
-        {% for link in all_links %}
-            {% if link.category == category %}
-            <tr>
-                <td><a href="{{ link.link }}">{{ link.name }}</a></td>
-            <td>{{ link.description }}</td>
-            </tr>
-            {% endif %}
-        {% endfor %}
-    </table>
+    <div class="table-responsive-sm">
+        <table class="table table-dark table-hover table-bordered" style="border: 3px solid #FF9500">
+          <tr><th colspan=2>{{ category }}</th></tr>
+          <th>Site</th>
+          <th>Summary</th>
+          {% for link in all_links %}
+          {% if link.category == category %}
+          <tr>
+              <td><a href="{{ link.link }}">{{ link.name }}</a></td>
+              <td>{{ link.description }}</td>
+          </tr>
+          {% endif %}
+          {% endfor %}
+        </table>
+    </div>
     {% endfor %}
-
+  </div>
 </body>
-
 {% endblock %}
