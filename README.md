@@ -1,6 +1,6 @@
 # ritlinks
 A website that displays a dynamically updated list of the many websites that Rochester Institute of Technology has.
-Check it out at [ritlinks.cs.house](ritlinks.cs.house)!
+Check it out at [ritlinks.com](http://ritlinks.com)!
 
 ## Features
 + Dynamically generated content including links, link names, and descriptions.
