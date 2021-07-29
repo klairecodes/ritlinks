@@ -10,6 +10,7 @@ class LinkEntry(models.Model):
     description = models.TextField(max_length=300, help_text='Enter a description for the link.')
     category = models.ForeignKey('Category', on_delete=models.SET_NULL, null=True)
     clicks = models.IntegerField(default=0, editable=False);
+    my_order = models.PositiveIntegerField(default=0, blank=False, null=False)
 
     def __str__(self):
         """String for representing the LinkEntry."""
@@ -18,6 +19,10 @@ class LinkEntry(models.Model):
     def get_absolute_url(self):
         """Returns the url to access the details of the LinkEntry."""
         return reverse('link-detail', args=[str(self.id)])
+
+    # Used for manual ordering of entries with adminsortable2.
+    class Meta(object):
+        ordering = ['my_order']
 
 class Category(models.Model):
     """Category that holds multiple related links"""
