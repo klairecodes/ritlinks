@@ -21,14 +21,13 @@ BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('SECRET_KEY', '-!oj1rxe@y2obrq=2x6$et4s4lja+-@qraku8&q5&pk4)3f42d')
+SECRET_KEY = os.environ.get('SECRET_KEY')
+
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = True
-# DEBUG = False
 # DEBUG looks at an os environment variable
 DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 
-ALLOWED_HOSTS = ["0.0.0.0", "ritlinks.cs.house"] # VERY TEMPORARY
+ALLOWED_HOSTS = ["0.0.0.0", "ritlinks.cs.house", "ritlinks.com"]
 
 
 # Application definition
@@ -78,29 +77,21 @@ WSGI_APPLICATION = 'ritlinks.wsgi.application'
 
 
 # Database
-# https://docs.djangoproject.com/en/3.1/ref/settings/#databases
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
 DATABASES = {
  
     'default': {
  
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
  
-        'NAME': 'ritlinks',
+        'NAME': os.environ.get('RITLINKS_DB'),
  
-        'USER': 'ritlinks-user',
+        'USER': os.environ.get('RITLINKS_DB_USER'),
  
-        'PASSWORD': 'ponytail-acrimony6',
+        'PASSWORD': os.environ.get('RITLINKS_DB_PW'),
  
-        'HOST': 'localhost',
+        'HOST': os.environ.get('RITLINKS_DB_HOST'),
  
-        'PORT': '5432',
+        'PORT': os.environ.get('RITLINKS_DB_PORT'),
  
     }
  
