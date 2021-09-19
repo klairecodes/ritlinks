@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 from pathlib import Path
+from decouple import config
 import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -21,7 +22,7 @@ BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('SECRET_KEY')
+SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG looks at an os environment variable
@@ -83,15 +84,15 @@ DATABASES = {
 
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
 
-        'NAME': 'ritlinks',
+        'NAME': config('RITLINKS_DB'),
 
-        'USER': 'ritlinks',
+        'USER': config('RITLINKS_DB_USER'),
 
-        'PASSWORD': os.environ.get('RITLINKS_DB_PW'),
+        'PASSWORD': config('RITLINKS_DB_PW'),
 
-        'HOST': os.environ.get('RITLINKS_DB_HOST'),
+        'HOST': config('RITLINKS_DB_HOST'),
 
-        'PORT': os.environ.get('RITLINKS_DB_PORT'),
+        'PORT': config('RITLINKS_DB_PORT'),
 
     }
 

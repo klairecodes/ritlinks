@@ -11,4 +11,5 @@ toml==0.10.2
 wrapt==1.12.1
 psycopg2==2.8.6
 django-admin-sortable2==1.0
+python-decouple==3.4
 
