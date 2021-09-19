@@ -78,23 +78,23 @@ WSGI_APPLICATION = 'ritlinks.wsgi.application'
 
 # Database
 DATABASES = {
- 
+
     'default': {
- 
+
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
- 
-        'NAME': os.environ.get('RITLINKS_DB'),
- 
-        'USER': os.environ.get('RITLINKS_DB_USER'),
- 
+
+        'NAME': 'ritlinks',
+
+        'USER': 'ritlinks',
+
         'PASSWORD': os.environ.get('RITLINKS_DB_PW'),
- 
+
         'HOST': os.environ.get('RITLINKS_DB_HOST'),
- 
+
         'PORT': os.environ.get('RITLINKS_DB_PORT'),
- 
+
     }
- 
+
 }
 
 

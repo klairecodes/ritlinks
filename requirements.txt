@@ -1,4 +1,4 @@
-asgiref==3.3.1
+asgiref==3.2.10
 astroid==2.5
 Django==3.1.2
 isort==5.7.0
@@ -9,3 +9,6 @@ pytz==2021.1
 sqlparse==0.4.1
 toml==0.10.2
 wrapt==1.12.1
+psycopg2==2.8.6
+django-admin-sortable2==1.0
+
