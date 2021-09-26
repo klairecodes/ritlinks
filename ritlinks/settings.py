@@ -28,7 +28,7 @@ SECRET_KEY = config('SECRET_KEY')
 # DEBUG looks at an os environment variable
 DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 
-ALLOWED_HOSTS = ["0.0.0.0", "ritlinks.cs.house", "ritlinks.com"]
+ALLOWED_HOSTS = ["0.0.0.0", "ritlinks.cs.house", "ritlinks.csh.gay", "ritlinks.com"]
 
 
 # Application definition
